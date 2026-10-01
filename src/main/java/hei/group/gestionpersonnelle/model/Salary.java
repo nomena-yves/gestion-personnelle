@@ -6,8 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.sql.Date;
 import java.time.LocalDate;
-import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -20,7 +20,5 @@ public class Salary {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
     private double salary;
-    private LocalDate issueDate;
-    @OneToOne
-    private Personal personal;
+    private LocalDate issueDate= LocalDate.now();
 }
