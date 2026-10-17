@@ -23,6 +23,9 @@ public class Personal {
     private String email;
     private String phone;
     private Role role;
+    private double baseSalary;
     @OneToOne
     private Salary salary;
+    @OneToOne
+    private HistoricalSalary historicalSalary;
 }
